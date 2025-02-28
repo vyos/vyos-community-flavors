@@ -1,0 +1,13 @@
+# Generic ISO image including AMD & Intel microcode, for usage on bare-metal deployments.
+
+image_format = "iso"
+
+packages = [
+    "intel-microcode",
+    "amd64-microcode"
+]
+
+[additional_repositories.firmware]
+url = "https://ftp.debian.org/debian"
+components = "non-free-firmware"
+no_source = true
