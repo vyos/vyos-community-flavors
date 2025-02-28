@@ -1,4 +1,4 @@
 # VyOS build for gerneric qemu/kvm environments like proxmox. 
-# Includes "qemu-guest-agent" to improve interoperability with different cloud environments and "cloud-init" (see: https://docs.vyos.io/en/latest/automation/cloud-init.html and https://docs.vyos.io/en/latest/automation/cloud-init.html#prepare-cloud-init-files)
+# Includes "qemu-guest-agent" to improve interoperability with different cloud environments
 image_format = "qcow2"
 packages=["qemu-guest-agent"]

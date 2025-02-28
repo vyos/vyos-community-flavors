@@ -2,3 +2,8 @@
 # Includes "qemu-guest-agent" to improve interoperability with different cloud environments and "cloud-init" (see: https://docs.vyos.io/en/latest/automation/cloud-init.html and https://docs.vyos.io/en/latest/automation/cloud-init.html#prepare-cloud-init-files)
 image_format = "qcow2"
 packages=["qemu-guest-agent", "cloud-init"]
+
+# Needed because the vyos-cloud-init has a bug where it can't write the cloud init provided config because the file doesn't exist (see: https://vyos.dev/T7206)
+[[includes_chroot]]
+path = "opt/vyatta/etc/config/config.boot"
+data = ""
